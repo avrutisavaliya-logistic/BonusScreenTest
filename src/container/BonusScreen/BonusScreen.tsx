@@ -36,6 +36,7 @@ import {
 import {ImageBackground, View} from 'react-native';
 import Images from '../../utils/theme/images';
 import LinearGradient from 'react-native-linear-gradient';
+import {Colors} from '../../utils/theme';
 
 const BonusScreen = () => {
   const [days, setDays] = useState([
@@ -157,10 +158,7 @@ const BonusScreen = () => {
         bounces={false}>
         <ImageBackground
           source={Images.bgImage}
-          style={{
-            width: '100%',
-            height: '100%',
-          }}
+          style={styles.imageBg}
           resizeMode="cover">
           <View style={styles.container}>
             <Header>
@@ -198,7 +196,7 @@ const BonusScreen = () => {
                   <LinearGradient
                     start={{x: 0, y: 0}}
                     end={{x: 1, y: 0}}
-                    colors={['#5470FE', '#FA67C6']}
+                    colors={Colors.gradientButton}
                     style={styles.linearGradient}>
                     <DailyBonusText>
                       {countdown !== 0
@@ -224,7 +222,7 @@ const BonusScreen = () => {
                       <LinearGradient
                         start={{x: 0, y: 0}}
                         end={{x: 1, y: 0}}
-                        colors={['#5470FE', '#FA67C6']}
+                        colors={Colors.gradientButton}
                         style={styles.smallButton}>
                         <TaskDescription>
                           {task.rewarded ? 'Claim' : 'Get'}
@@ -250,7 +248,7 @@ const BonusScreen = () => {
                       <LinearGradient
                         start={{x: 0, y: 0}}
                         end={{x: 1, y: 0}}
-                        colors={['#5470FE', '#FA67C6']}
+                        colors={Colors.gradientButton}
                         style={styles.smallWatchButton}>
                         <TaskDescription>
                           {ad.rewarded ? 'Claim' : 'Watch'}

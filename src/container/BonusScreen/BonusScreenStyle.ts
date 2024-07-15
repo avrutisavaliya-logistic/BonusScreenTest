@@ -4,12 +4,14 @@ import {StyleSheet} from 'react-native';
 
 export const Container = styled.View`
   flex: 1;
+  background-color: ${Colors.black};
 `;
 
 export const ScrollContainer = styled.ScrollView``;
 
 export const Header = styled.View`
   margin-top: ${Responsive.heightPercentageToDP('8.5')}px;
+  margin-bottom: ${Responsive.heightPercentageToDP('4')}px;
   padding: ${Responsive.widthPercentageToDP('2')}px;
 `;
 
@@ -81,6 +83,7 @@ export const DayText = styled.Text`
   font-size: ${Responsive.convertFontScale('10')}px;
   line-height: ${Responsive.convertFontScale('15')}px;
   color: ${Colors.gray8D};
+  margin-top: 1px;
 `;
 
 export const DailyBonusText = styled.Text`
@@ -144,7 +147,9 @@ export const AdReward = styled.Text`
   margin-left: ${Responsive.widthPercentageToDP('4')}px;
 `;
 
-export const ButtonAction = styled.TouchableOpacity``;
+export const ButtonAction = styled.TouchableOpacity`
+  opacity: ${props => (props.disabled ? 0.5 : 1)};
+`;
 
 export const Footer = styled.View`
   padding: ${Responsive.widthPercentageToDP('4')}px;
@@ -227,5 +232,9 @@ export const styles = StyleSheet.create({
   container: {
     margin: Responsive.widthPercentageToDP('4'),
     marginTop: Responsive.widthPercentageToDP('8'),
+  },
+  imageBg: {
+    width: '100%',
+    height: '90.5%',
   },
 });
