@@ -1,39 +1,41 @@
-1. How many years of experience do you have in React Native mobile app development?
+# Getting Started
 
-I have been working with React Native for 6+ years, developing various mobile applications.
+>**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
-2. Are you using a debugger?
+## Step 1: Start the Metro Server
 
-Yes, I regularly use a debugger to identify and fix issues during development. Tools like React Native Debugger and Chrome DevTools are part of my workflow.
+First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
 
-3. How many projects/experience do you have with native WebRTC/sockets?
+To start Metro, run the following command from the _root_ of your React Native project:
 
-I have worked on many projects involving native WebRTC/sockets, including real-time communication features for chat and video call applications.
+```bash
+# using npm
+npm start
 
-4. How do you implement Figma designs into the app?
+# OR using Yarn
+yarn start
+```
 
-I implement Figma designs by exporting assets and measuring specifications directly from Figma. I then use these assets and measurements to create corresponding components in React Native.
+## Step 2: Start your Application
 
-1. Do you have experience submitting apps to the app stores? If yes, how many?
+Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
 
-Yes, I have submitted multiple apps to both the Apple App Store and Google Play Store. This includes handling app store guidelines, preparing assets, and managing app updates.
+### For Android
 
-1. Do you have experience with Google AdMob integration? If yes, how many integrations?
+```bash
+# using npm
+npm run android
 
-Yes, I have integrated Google AdMob in some projects, implementing both banner and interstitial ads to generate revenue within the applications.
+# OR using Yarn
+yarn android
+```
 
-7. Do you have an iPhone? If yes, which?
+### For iOS
 
-Yes, I have an iPhone X, which I use for testing and ensuring compatibility of iOS versions of the apps I develop.
+```bash
+# using npm
+npm run ios
 
-8. We need daily commits of your work in the evening, do you agree?
-
-Yes, I agree to commit my work daily in the evening. Regular commits ensure that progress is tracked and any issues can be addressed promptly.
-
-9. What are your working days and hours?
-
-My working days are [Monday to Friday] and my working hours are from [10 AM to 7:30 PM]. I am flexible and can adjust to meet the project's needs.
-
-10. Are you willing to develop one screen as a test to prove your skills?
-
-Yes, I am willing to develop one screen as a test. This will give you an opportunity to assess my skills and ensure they align with the project's requirements.
+# OR using Yarn
+yarn ios
+```
